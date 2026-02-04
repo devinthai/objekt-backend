@@ -1,0 +1,13 @@
+[project]
+name = "objekt-backend"
+version = "0.1.0"
+description = "Backend code for an application tracking objekts in objekt.top"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.18.3",
+    "objekt-db",
+]
+
+[tool.uv.sources]
+objekt-db = { git = "https://github.com/devinthai/objekt-db" }
