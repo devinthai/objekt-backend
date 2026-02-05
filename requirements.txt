@@ -3,18 +3,28 @@
 alembic==1.18.3
     # via objekt-backend
 greenlet==3.3.1 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64'
-    # via sqlalchemy
+    # via
+    #   objekt-backend
+    #   sqlalchemy
 mako==1.3.10
-    # via alembic
+    # via
+    #   alembic
+    #   objekt-backend
 markupsafe==3.0.3
-    # via mako
+    # via
+    #   mako
+    #   objekt-backend
 objekt-db @ git+https://github.com/devinthai/objekt-db@23c664585a91899e9430e4558abe6bccf45c46bd
+    # via objekt-backend
+psycopg2-binary==2.9.11
     # via objekt-backend
 sqlalchemy==2.0.46
     # via
     #   alembic
+    #   objekt-backend
     #   objekt-db
 typing-extensions==4.15.0
     # via
     #   alembic
+    #   objekt-backend
     #   sqlalchemy

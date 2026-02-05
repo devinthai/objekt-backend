@@ -5,8 +5,14 @@ description = "Backend code for an application tracking objekts in objekt.top"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "alembic>=1.18.3",
+    "alembic==1.18.3",
+    "greenlet==3.3.1 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64'",
+    "mako==1.3.10",
+    "markupsafe==3.0.3",
     "objekt-db",
+    "psycopg2-binary==2.9.11",
+    "sqlalchemy==2.0.46",
+    "typing-extensions==4.15.0",
 ]
 
 [tool.uv.sources]
