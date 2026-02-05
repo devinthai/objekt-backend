@@ -14,7 +14,7 @@ markupsafe==3.0.3
     # via
     #   mako
     #   objekt-backend
-objekt-db @ git+https://github.com/devinthai/objekt-db@23c664585a91899e9430e4558abe6bccf45c46bd
+objekt-db @ git+https://github.com/devinthai/objekt-db@2346e32844ab20aba0c3be1d29a665b37269c1a7
     # via objekt-backend
 psycopg2-binary==2.9.11
     # via objekt-backend

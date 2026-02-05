@@ -144,7 +144,7 @@ requires-dist = [
 [[package]]
 name = "objekt-db"
 version = "0.1.0"
-source = { git = "https://github.com/devinthai/objekt-db#a5571b994d785ee39205a5eaebd7d212d2a0e07f" }
+source = { git = "https://github.com/devinthai/objekt-db#2346e32844ab20aba0c3be1d29a665b37269c1a7" }
 dependencies = [
     { name = "sqlalchemy" },
 ]
