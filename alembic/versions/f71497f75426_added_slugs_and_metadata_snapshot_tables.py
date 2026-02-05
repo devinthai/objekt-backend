@@ -1,8 +1,8 @@
-"""added slugs and metadata_snapshots tables
+"""added slugs and metadata_snapshot tables
 
-Revision ID: a3d78bf15ad3
+Revision ID: f71497f75426
 Revises: 
-Create Date: 2026-02-04 21:07:16.932341
+Create Date: 2026-02-05 08:40:24.643816
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'a3d78bf15ad3'
+revision: str = 'f71497f75426'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -24,9 +24,9 @@ def upgrade() -> None:
     op.create_table('metadata_snapshots',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('slug', sa.String(), nullable=True),
-    sa.Column('total', sa.String(), nullable=True),
-    sa.Column('spin', sa.String(), nullable=True),
-    sa.Column('transferable', sa.String(), nullable=True),
+    sa.Column('total', sa.Integer(), nullable=True),
+    sa.Column('spin', sa.Integer(), nullable=True),
+    sa.Column('transferable', sa.Integer(), nullable=True),
     sa.Column('snapshotTimestamp', sa.DateTime(timezone=True), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     schema='objekt_db'
