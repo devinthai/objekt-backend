@@ -1,8 +1,8 @@
-"""added slugs and metadata_snapshot tables
+"""updated slugid to be a unique value
 
-Revision ID: f71497f75426
+Revision ID: 3cb256c615f4
 Revises: 
-Create Date: 2026-02-05 08:40:24.643816
+Create Date: 2026-02-06 15:50:42.222267
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'f71497f75426'
+revision: str = '3cb256c615f4'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -49,6 +49,7 @@ def upgrade() -> None:
     sa.Column('onOffline', sa.String(), nullable=True),
     sa.Column('bandImageUrl', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('slugId'),
     schema='objekt_db'
     )
     # ### end Alembic commands ###
